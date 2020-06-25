@@ -1,0 +1,1 @@
+<span>Статус: {status}</span>
