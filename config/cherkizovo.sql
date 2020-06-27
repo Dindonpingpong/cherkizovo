@@ -63,6 +63,7 @@ CREATE TABLE PR
 
 INSERT INTO Staff VALUES (1, 'rkina','Nguen', 'Hai', 'Duong', SHA2('123',512), 'rkina7@gmail.com','Admin','89778660695','1998-07-03','VDNH','In love','Bachelor','Fullstack', 'PR', 130000);
 INSERT INTO Staff VALUES (2, 'test','Ntad', 'adi', 'Dugasdgng', SHA2('123',512), 'rkidasf','Adfdsa','89778662372','1998-09-06','Aeroport','In love','Bachelor','Develop', 'SMM', 115000);
+INSERT INTO Staff VALUES (3, 'admin','Ntad', 'adi', 'Dugasdgng', SHA2('123',512), 'rkidasf','Adfdsa','89778662372','1998-09-06','Aeroport','In love','Bachelor','Develop', 'adm', 115000);
 
 INSERT INTO SMM VALUES (1, '2019-06-01' , 'test', 150000, 3758, 235, 4072281, 120, 249, 1,'done');
 INSERT INTO SMM VALUES (2, '2019-07-01' , 'test1', 114214, 3421, 2124, 4072281, 120, 249, 1,'progress');

@@ -7,6 +7,7 @@ if (!isset($_SESSION))
 require('components/head.php');
 $file = file_get_contents("components/header.php");
 $file = str_replace("{in}", '', $file);
+$file = str_replace("{adm}", ' ', $file);
 $check = ft_auth(@$_POST['login'], @$_POST['password']);
 if (@$_POST["submit"] === "Войти" && $check) {
     $_SESSION["logged"] = $check;
