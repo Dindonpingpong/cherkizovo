@@ -71,4 +71,4 @@ INSERT INTO PR (Description, Price, Tv, MassMedia, Gallery, PosComments, NegComm
 VALUES ('PRPRPRP', 124000, 12,51,51,125, 124, 1, 'Progress');
 -- select Date(DatePR), Description, Price, Tv, MassMedia, Gallery, PosComments, NegComments, Staff.Login, Stat from PR INNER JOIN Staff WHERE PR.ID = Staff.ID;
 -- SELECT CreatedAt, Description, Price, Likes, Dislikes, Views, Shares, Comments, Staff.Login, Stat FROM SMM INNER JOIN Staff WHERE SMM.ID = Staff.ID;
-SELECT Surname, MiddleName, Email, Phone, DateBirth, Address, FamilyStatus, Education, Job, Department, Salary FROM Staff;
+-- SELECT Surname, MiddleName, Email, Phone, DateBirth, Address, FamilyStatus, Education, Job, Department, Salary FROM Staff;
