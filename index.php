@@ -2,9 +2,8 @@
 if (!isset($_SESSION))
 	session_start();
 require('dhead.php');
-
-
 ?>
+
 <div class="index_page">
 	<h2 class="product-title">Черкизовский мясокомбинат</h2>
 	<div class='about'>

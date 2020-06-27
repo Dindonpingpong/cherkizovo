@@ -1,0 +1,12 @@
+<tr>
+    <td>{Date}</td>
+    <td>{Description}</td>
+    <td>{Price}</td>
+    <td>{Tv}</td>
+    <td>{MassMedia}</td>
+    <td>{Gallery}</td>
+    <td>{PosComments}</td>
+    <td>{NegComments}</td>
+    <td>{Name}</td>
+    <td>{Status}</td>
+</tr>

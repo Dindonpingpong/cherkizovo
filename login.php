@@ -9,12 +9,8 @@ $file = file_get_contents("components/header.php");
 $file = str_replace("{in}", '', $file);
 $check = ft_auth(@$_POST['login'], @$_POST['password']);
 if (@$_POST["submit"] === "Войти" && $check) {
-    $_SESSION["logged"] = $_POST["login"];
-    if ($check === 'admin') {
-        $_SESSION['User_status'] = 'admin';
-        header("Location: admin.php");
-    } else
-        header("Location: catalog.php");
+    $_SESSION["logged"] = $check;
+    header("Location: index.php");
 }
 echo $file;
 ?>
