@@ -5,7 +5,7 @@ require('components/head.php');
 $file = file_get_contents("components/header.php");
 if (isset($_SESSION['logged'])) 
 {
-    if ($_SESSION['logged'] == 'adm')
+    if ($_SESSION['logged'] == 'ADM')
         $file = str_replace("{adm}", '<li><a href="adm.php">Панель админа</a></li>', $file);
     else
         $file = str_replace("{adm}", ' ', $file);

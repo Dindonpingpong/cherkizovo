@@ -1,6 +1,8 @@
 <?php
 $projects = ft_fill_projects($_SESSION['logged']);
 $projects_pr = ft_fill_projects($_SESSION['logged']);
+$options_smm = ft_fill_options('SMM');
+$options_pr = ft_fill_options('PR');
 ?>
 
 <section class="project align_footer">
@@ -24,7 +26,7 @@ $projects_pr = ft_fill_projects($_SESSION['logged']);
 			</select>
 			<select id="sort_name" name="select_genre">
 				<option value="All">Сотрудники</option>
-				<?= $options ?>
+				<?= $options_smm ?>
 			</select>
 			<input type="submit" name="submit" value="ok">
 		</form>
@@ -67,7 +69,7 @@ $projects_pr = ft_fill_projects($_SESSION['logged']);
 			</select>
 			<select name="select_staff">
 				<option value="All">Сотрудники</option>
-				<?= $options ?>
+				<?= $options_pr ?>
 			</select>
 			<input type="submit" name="submit" value="ok">
 		</form>
