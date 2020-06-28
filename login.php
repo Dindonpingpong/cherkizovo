@@ -11,6 +11,7 @@ $file = str_replace("{adm}", ' ', $file);
 $check = ft_auth(@$_POST['login'], @$_POST['password']);
 if (@$_POST["submit"] === "Войти" && $check) {
     $_SESSION["logged"] = $check;
+    $_SESSION["login"] = @$_POST['login'];
     header("Location: index.php");
 }
 echo $file;

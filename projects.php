@@ -7,5 +7,8 @@ if ($_SESSION['logged'] == "SMM")
 	require('smm_projects.php');
 else if ($_SESSION['logged'] == "PR")
 	require('pr_projects.php');
+else if ($_SESSION['logged'] == 'ADM') {
+	require('all_projects.php');
+}
 require('components/footer.php');
 ?>

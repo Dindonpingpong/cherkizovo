@@ -1,13 +1,10 @@
 <tr>
+    <td>{Name}</td>
     <td>{SurName}</td>
     <td>{MiddleName}</td>
-    <td>{Email}</td>
-    <td>{Phone}</td>
-    <td>{DateBirth}</td>
-    <td>{Address}</td>
-    <td>{FamilyStatus}</td>
-    <td>{Education}</td>
-    <td>{Job}</td>
     <td>{Department}</td>
-    <td>{Salary}</td>
+    <td>{Job}</td>
+    <td>{Phone}</td>
+    <td>{Email}</td>
+    <td>{DateBirth}</td>
 </tr>

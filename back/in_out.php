@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION))
     session_start();
-$file = file_get_contents("components/header.php");
+$file = file_get_contents("../components/header.php");
 if (isset($_SESSION['logged'])) {
     session_destroy();
     $file = str_replace("{in}", 'Войти', $file);

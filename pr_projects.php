@@ -1,11 +1,21 @@
 <?php
-if (isset($_POST['select_date']))
-	$projects = ft_fill_projects($_SESSION['logged']);
+require_once "back/get_staff.php";
+require_once "back/get_projects.php";
+
+$projects = ft_fill_projects($_SESSION['logged']);
+$options = ft_fill_options('PR');
+if ($_POST['submit'] === 'ok') {
+	$date = ($_POST['select_date'] !== 'All') ? $_POST['select_date'] : null;
+	$price = ($_POST['select_price'] !== 'All') ? $_POST['select_price'] : null;
+	$comments = ($_POST['select_comments'] !== 'All') ? $_POST['select_comments'] : null;
+	$staff = ($_POST['select_staff'] !== 'All') ? $_POST['select_staff'] : null;
+	$projects = ft_sorted_pr_projects($date, $price, $comments, $staff);
+}
 ?>
 
-<section class="catalog align_footer">
+<section class="project align_footer">
 	<div class="container">
-		<h2 class="catalog-title">Каталог товаров</h2>
+		<h2 class="project-title">Проекты отдела PR</h2>
 		<form method="POST">
 			<select name="select_date">
 				<option value="All">Дата</option>
@@ -28,7 +38,19 @@ if (isset($_POST['select_date']))
 			</select>
 			<input type="submit" name="submit" value="ok">
 		</form>
-		<table>
+		<table class="project-table table-pr">
+			<tr>
+				<td>Дата</td>
+				<td>Описание</td>
+				<td>Цена</td>
+				<td>ТВ</td>
+				<td>Масс-медиа</td>
+				<td>Галлерея</td>
+				<td>Кол-во поз. отзывов</td>
+				<td>Кол-во отр. отзывов</td>
+				<td>Ответ-ый</td>
+				<td>Статус</td>
+			</tr>
 			<?= $projects ?>
 		</table>
 	</div>
