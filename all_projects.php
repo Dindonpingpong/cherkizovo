@@ -1,4 +1,5 @@
 <?php
+require_once "back/get_staff.php";
 $projects = ft_fill_projects($_SESSION['logged']);
 $projects_pr = ft_fill_projects($_SESSION['logged']);
 $options_smm = ft_fill_options('SMM');
