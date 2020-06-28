@@ -124,7 +124,12 @@ function ft_sorted_pr_projects($date, $price, $comments, $staff)
             $condition = "WHERE StaffID = $staff ";
     }
     else
-        $condition = $order;
+    {
+        if (strlen($order) > 9)
+            $condition = $order;
+        $condition = ''; 
+    }
+
     $sql = "SELECT Date(DatePR), Description, Price, Tv, MassMedia, Gallery, PosComments, NegComments, Staff.Login, Stat 
     FROM PR INNER JOIN Staff ON PR.StaffID = Staff.ID $condition";
     $res = ft_get_pr_projects($link, $sql);
@@ -135,7 +140,7 @@ function ft_sorted_smm_projects($date, $price, $views, $staff) {
     $link = ft_connect_to_db();
     $order = 'ORDER BY ';
     if ($date) {
-        $order .= "DatePR $date";
+        $order .= "CreatedAt $date";
         if ($price || $views)
             $order .= ', ';
     }
@@ -153,7 +158,12 @@ function ft_sorted_smm_projects($date, $price, $views, $staff) {
             $condition = "WHERE StaffID = $staff ";
     }
     else
-        $condition = $order;
+    {
+        if (strlen($order) > 9)
+            $condition = $order;
+        $condition = ''; 
+    }
+        
     $sql = "SELECT Date(CreatedAt), Description, Price, Likes, Dislikes, Views, Shares, Comments, Staff.Login, Stat 
     FROM SMM INNER JOIN Staff ON SMM.StaffID = Staff.ID $condition";
     $res = ft_get_smm_projects($link, $sql);
