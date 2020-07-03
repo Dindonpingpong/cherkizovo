@@ -1,0 +1,8 @@
+1. Включить веб-сервер и БД-сервер:
+    php -S localhost:8080
+    sudo /etc/init.d/mysql start или sudo service mysql start
+2. sudo mysql
+    SHOW DATABASES;
+3. cd config/
+    ./install.php
+4. 
