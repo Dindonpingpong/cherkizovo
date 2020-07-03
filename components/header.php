@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="site-navigation">
             <a class="site-logo" href="index.php">
-                <img src="img/logo21.png" alt="Логотип магазина ***">
+                <img src="img/logo.png" alt="Логотип магазина ***">
             </a>
             <ul class="site-navigation-list">
                 <li><a href="index.php">Главная</a></li>

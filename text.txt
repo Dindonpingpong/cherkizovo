@@ -4,5 +4,4 @@
 2. sudo mysql
     SHOW DATABASES;
 3. cd config/
-    ./install.php
-4. 
+    ./install.php 
